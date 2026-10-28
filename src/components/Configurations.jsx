@@ -29,7 +29,7 @@ export const Configurations = ({ onSelectPlot }) => {
             >
               {config.popular && (
                 <div className="popular-badge">
-                  <Sparkles size={12} />
+                  {/* <Sparkles size={12} /> */}
                   <span>PRE-LAUNCH PRIVILEGE</span>
                 </div>
               )}

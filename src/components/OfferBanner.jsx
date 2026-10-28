@@ -37,7 +37,7 @@ export const OfferBanner = ({ onOpenEnquiry }) => {
       <div className="container">
         <div className="offer-banner-card">
           <div className="offer-badge-pill">
-            <Sparkles size={14} />
+            {/* <Sparkles size={14} /> */}
             <span>{preLaunchOffer.badge}</span>
           </div>
 

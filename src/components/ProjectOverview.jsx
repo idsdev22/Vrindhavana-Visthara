@@ -30,7 +30,7 @@ export const ProjectOverview = ({ onOpenEnquiry }) => {
           {/* Right Column: Narrative & Highlights */}
           <div className="overview-content-col">
             <div className="section-tag">
-              <Sparkles size={14} />
+              {/* <Sparkles size={14} /> */}
               <span>{overview.subtitle}</span>
             </div>
 

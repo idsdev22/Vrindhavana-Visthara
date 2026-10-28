@@ -91,7 +91,7 @@ export const propertyData = {
     { label: "Luxury Villas", value: "3 & 4", unit: "BHK", icon: "Home" },
     { label: "3 BHK From", value: "2", unit: "Cr*", icon: "Wallet" },
     { label: "4 BHK From", value: "3", unit: "Cr*", icon: "Sparkles" },
-    { label: "Sathy Main Road", value: "5", unit: "Mins", icon: "Route" }
+    { label: "Sathy Main Road", value: "", unit: "It's bang on", icon: "Route" }
   ],
 
   // --- PROJECT OVERVIEW SECTION ---

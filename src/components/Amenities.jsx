@@ -44,7 +44,7 @@ export const Amenities = () => {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">
-            <Sparkles size={14} />
+            {/* <Sparkles size={14} /> */}
             <span>Community Amenities</span>
           </div>
           <h2 className="section-title">
