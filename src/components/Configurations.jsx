@@ -23,8 +23,8 @@ export const Configurations = ({ onSelectPlot }) => {
 
         <div className="config-grid">
           {configurations.map((config) => (
-            <div 
-              key={config.id} 
+            <div
+              key={config.id}
               className={`config-card ${config.popular ? 'popular-card' : ''}`}
             >
               {config.popular && (
@@ -65,8 +65,8 @@ export const Configurations = ({ onSelectPlot }) => {
               </div>
 
               <div className="config-footer">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className={`btn-config-action ${config.popular ? 'btn-primary' : 'btn-outline'} w-100`}
                   onClick={() => onSelectPlot(config)}
                 >
