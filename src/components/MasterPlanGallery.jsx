@@ -151,7 +151,7 @@ export const MasterPlanGallery = () => {
               <div className="pure-caption-bar">
                 <div className="caption-text-wrap">
                   <span className="caption-label">VRINDHAVANA VISTHARA • SARAVANAMPATTI</span>
-                  <h4 className="caption-title">{currentItem.title}</h4>
+                  {currentItem.title && <h4 className="caption-title">{currentItem.title}</h4>}
                 </div>
                 <div className="pure-swipe-hint">
                   <span>← Swipe to explore →</span>
@@ -168,7 +168,7 @@ export const MasterPlanGallery = () => {
                     type="button"
                     className={`pure-thumb-card ${currentIndex === idx ? 'active' : ''}`}
                     onClick={() => setCurrentIndex(idx)}
-                    title={item.title}
+                    title={item.title || `Image ${idx + 1}`}
                   >
                     <img src={item.image} alt={`Thumbnail ${idx + 1}`} className="pure-thumb-img" />
                     <span className="thumb-idx">{String(idx + 1).padStart(2, '0')}</span>
@@ -219,7 +219,7 @@ export const MasterPlanGallery = () => {
             <div className="pure-lightbox-image-container">
               <img
                 src={images[lightboxIndex].image}
-                alt={images[lightboxIndex].title}
+                alt={images[lightboxIndex]?.title || `Gallery view ${lightboxIndex + 1}`}
                 className="pure-lightbox-img"
               />
             </div>
@@ -227,8 +227,8 @@ export const MasterPlanGallery = () => {
             {/* Clean Lightbox Caption Footer */}
             <div className="pure-lightbox-footer">
               <div className="footer-title-wrap">
-                <span className="footer-project-tag">VRINDHAVANA VISTHARA • Dream Villa Makers</span>
-                <h3 className="footer-title">{images[lightboxIndex].title}</h3>
+                <span className="footer-project-tag">VRINDHAVANA VISTHARA • SARAVANAMPATTI</span>
+                {images[lightboxIndex]?.title && <h3 className="footer-title">{images[lightboxIndex].title}</h3>}
               </div>
               <div className="footer-counter">
                 {String(lightboxIndex + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}

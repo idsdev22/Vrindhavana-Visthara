@@ -5,32 +5,25 @@
  * Premium Gated Community with Luxury Residential Villas at Saravanampatti, Coimbatore.
  */
 
-import img1 from '../assets/1.jpeg';
-import img2 from '../assets/2.jpeg';
-import img3 from '../assets/3.jpeg';
-import img4 from '../assets/4.jpeg';
-import img5 from '../assets/5.jpeg';
-import img6 from '../assets/6.jpeg';
-import img7 from '../assets/7.jpeg';
-import img8 from '../assets/8.jpeg';
-import img9 from '../assets/9.jpeg';
-import img10 from '../assets/10.jpeg';
-import img11 from '../assets/11.jpeg';
-import img12 from '../assets/12.jpeg';
-import img13 from '../assets/13.jpeg';
-import img14 from '../assets/14.jpeg';
-import img15 from '../assets/15.jpeg';
-import img16 from '../assets/16.jpeg';
-import img17 from '../assets/17.jpeg';
+import img1 from '../assets/1.jpg';
+import img2 from '../assets/2.jpg';
+import img3 from '../assets/3.jpg';
+import img4 from '../assets/4.jpg';
+import img5 from '../assets/5.jpg';
+import img6 from '../assets/6.jpg';
+import img7 from '../assets/7.jpg';
+import img8 from '../assets/8.jpg';
+import img9 from '../assets/9.jpg';
+import img10 from '../assets/10.jpg';
+
 
 export const propertyData = {
   // --- ASSET REFS ---
   images: {
     hero: img2,
-    amenities: [img1, img3, img4, img5, img6, img7, img8, img9],
+    amenities: [img1, img3, img4, img5, img6, img7, img8, img9, img10],
     gallery: [
-      img1, img2, img3, img4, img5, img6, img7, img8,
-      img9, img10, img11, img12, img13, img14, img15, img16, img17
+      img1, img2, img3, img4, img5, img6, img7, img8, img9, img10
     ]
   },
 
@@ -48,10 +41,10 @@ export const propertyData = {
     statusBadge: "PRE LAUNCHING",
     priceStarting: "₹2 Cr*",
     priceStartingPlot: "₹2 Cr* Onwards",
-    marketPrice: "₹2.5 Cr* Onwards",
-    priceStarting3bhk: "₹2 Cr*",
-    priceStarting4bhk: "₹2.5 Cr*",
-    totalArea: "12.5 Acres",
+    marketPrice: "₹3 Cr* Onwards",
+    priceStarting3bhk: "₹2 Cr & ₹2.5 Cr*",
+    priceStarting4bhk: "₹3 Cr*",
+    totalArea: "10 Acres",
     totalUnits: "Premium Luxury Villas",
     communityType: "Premium Gated Community With Luxury Residential Villas",
     possession: "Ready for Registration & Immediate Construction",
@@ -71,13 +64,13 @@ export const propertyData = {
     categoryBadge: "PREMIUM GATED COMMUNITY WITH LUXURY RESIDENTIAL VILLAS",
     locationHeading: "SATHY MAIN ROAD, SARAVANAMPATTI",
     projectName: "VRINDHAVANA VISTHARA",
-    description: "Premium Gated Community With Luxury Residential Villas on Sathy Main Road, 9 Saravanampatti. 3BHK starts from 2Cr | 4BHK starts from 2.5Cr with world-class amenities.",
+    description: "Premium 10-Acre Gated Community With Luxury Residential Villas on Sathy Main Road, 9 Saravanampatti. 3BHK: 2 Cr & 2.5 Cr | 4BHK starts from 3 Cr with world-class amenities.",
     heroImageDesktop: img2,
     heroImageMobile: img2,
-    marketPricePerCent: "2.5Cr",
+    marketPricePerCent: "3.5Cr",
     preLaunchPricePerCent: "2Cr",
-    pricing3Bhk: "3Bhk Starts From 2Cr",
-    pricing4Bhk: "4Bhk Starts From 2.5Cr",
+    pricing3Bhk: "3Bhk: 2Cr & 2.5Cr",
+    pricing4Bhk: "4Bhk Starts From 3Cr",
     transitHighlights: [
       { time: "2 MINS", place: "KUMARAN MEDICAL (1 KM)", icon: "Cross" },
       { time: "8 MINS", place: "KGISL CAMPUS (5 KM)", icon: "GraduationCap" },
@@ -85,19 +78,19 @@ export const propertyData = {
       { time: "15 MINS", place: "COIMBATORE AIRPORT (9 KM)", icon: "Plane" }
     ],
     quickBadges: [
-      "3Bhk Starts From 2Cr",
-      "4Bhk Starts From 2.5Cr",
+      "3Bhk: 2Cr & 2.5Cr",
+      "4Bhk Starts From 3Cr",
       "Sathy Main Road, 9 Saravanampatti",
-      "Premium Luxury Villas"
+      "10 Acres Gated Community"
     ]
   },
 
   // --- QUICK KEY METRICS COUNTER ---
   keyStats: [
-    { label: "Premium Gated Community", value: "12.5", unit: "Acres", icon: "LandPlot" },
+    { label: "Premium Gated Community", value: "10", unit: "Acres", icon: "LandPlot" },
     { label: "Luxury Villas", value: "3 & 4", unit: "BHK", icon: "Home" },
-    { label: "Starting Price", value: "2", unit: "Cr*", icon: "Wallet" },
-    // { label: "4 BHK From", value: "2.5", unit: "Cr*", icon: "Sparkles" },
+    { label: "3 BHK From", value: "2", unit: "Cr*", icon: "Wallet" },
+    { label: "4 BHK From", value: "3", unit: "Cr*", icon: "Sparkles" },
     { label: "Sathy Main Road", value: "5", unit: "Mins", icon: "Route" }
   ],
 
@@ -105,15 +98,15 @@ export const propertyData = {
   overview: {
     subtitle: "Premium Gated Community",
     title: "Vrindhavana Visthara, Saravanampatti, Coimbatore",
-    leadText: "Vrindhavana Visthara is an exclusive premium gated community offering luxury residential villas at Sathy Main Road, 9 Saravanampatti, Coimbatore.",
+    leadText: "Vrindhavana Visthara is an exclusive premium 10-acre gated community offering luxury residential villas at Sathy Main Road, 9 Saravanampatti, Coimbatore.",
     paragraphs: [
       "Strategically situated on Sathy Main Road in the prestigious Saravanampatti IT corridor, Vrindhavana Visthara places Coimbatore's finest IT hubs, educational institutions, healthcare centers, and shopping destinations within easy reach.",
-      "Thoughtfully designed with 3 BHK (starting from 2Cr) and 4 BHK (starting from 2.5Cr) luxury villas, the enclave combines architectural elegance with lush landscaped spaces, wide blacktop roads, underground utilities, and 24/7 multi-tier security.",
+      "Thoughtfully designed with 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (starting from ₹3 Cr) luxury villas across 10 acres, the enclave combines architectural elegance with lush landscaped spaces, wide blacktop roads, underground utilities, and 24/7 multi-tier security.",
       "Call 898 898 2030 to schedule your exclusive site visit and secure your dream villa in Coimbatore's premier gated community."
     ],
     highlightsList: [
-      "Premium Gated Community with Luxury Residential Villas",
-      "3Bhk Starts From 2Cr | 4Bhk Starts From 2.5Cr",
+      "10-Acre Premium Gated Community with Luxury Residential Villas",
+      "3Bhk: 2 Cr & 2.5 Cr | 4Bhk Starts From 3 Cr",
       "Prime Location on Sathy Main Road, 9 Saravanampatti",
       "Call: 898 898 2030 for VIP Site Visits"
     ],
@@ -126,78 +119,133 @@ export const propertyData = {
     {
       id: "villa-3bhk",
       type: "3 BHK Luxury Villa",
-      cent: "3.5 Cents",
-      sqft: "2,200 Sq.Ft.",
-      dimension: "30' × 50'",
+      cent: "2.75 Cents",
+      sqft: "1,850 Sq.Ft.",
+      dimension: "30' × 40'",
       idealFor: "Spacious 3 BHK Luxury Residential Villa",
       price: "₹2 Cr*",
       status: "Available",
-      popular: true,
+      popular: false,
       features: ["East / North Facing", "Double Covered Car Parking", "Private Garden", "Vasthu Compliant"]
+    },
+    {
+      id: "villa-3bhk-premium",
+      type: "3 BHK Premium Villa",
+      cent: "3.5 Cents",
+      sqft: "2,350 Sq.Ft.",
+      dimension: "30' × 50'",
+      idealFor: "Enhanced 3 BHK Villa with Large Living & Lawn",
+      price: "₹2.5 Cr*",
+      status: "Popular",
+      popular: true,
+      features: ["Spacious Private Lawn", "Double Covered Car Parking", "Dedicated Family Lounge", "100% Vasthu Compliant"]
     },
     {
       id: "villa-4bhk",
       type: "4 BHK Royal Villa",
-      cent: "5.0 Cents",
-      sqft: "3,100 Sq.Ft.",
-      dimension: "40' × 55'",
+      cent: "4.2 Cents",
+      sqft: "2,850 Sq.Ft.",
+      dimension: "35' × 52'",
       idealFor: "Grand 4 BHK Duplex Luxury Villa",
-      price: "₹2.5 Cr*",
+      price: "₹3 Cr* Onwards",
       status: "Premium",
       popular: true,
       features: ["Corner Villa Option", "Private Terrace Deck", "Servant / Home Theatre Room", "High Ceiling Foyer"]
     }
   ],
 
-  // --- SIGNATURE AMENITIES (8 Core Community Features) ---
+  // --- SIGNATURE AMENITIES (Brochure Showcase - 13 Core Features) ---
   amenities: [
     {
       id: 1,
-      title: "Grand Entrance Arch",
-      subtitle: "Secured Gated Entry",
-      icon: "ShieldCheck"
+      title: "Located on National Highway.",
+      subtitle: "Well Connected to the city",
+      text: "Located on National Highway. Well Connected to the city",
+      icon: "Route"
     },
     {
       id: 2,
-      title: "Wide Blacktop Roads",
-      subtitle: "40ft & 30ft Avenues",
-      icon: "Milestone"
-    },
-    {
-      id: 3,
-      title: "Underground EB Power",
-      subtitle: "Cabled Infrastructure",
-      icon: "Zap"
-    },
-    {
-      id: 4,
-      title: "24/7 Water Supply",
-      subtitle: "Dedicated Plumbed Line",
-      icon: "Droplets"
-    },
-    {
-      id: 5,
-      title: "Landscaped Central Park",
-      subtitle: "Lush Green Spaces",
+      title: "3 OSR Gardens for",
+      subtitle: "Serene Living",
+      text: "3 OSR Gardens for Serene Living",
       icon: "Trees"
     },
     {
+      id: 3,
+      title: "Beautifully planned Club House",
+      subtitle: "with Swimming Pool",
+      text: "Beautifully planned Club House with Swimming Pool",
+      icon: "Waves"
+    },
+    {
+      id: 4,
+      title: "Over 30+ Lifestyle Amenities",
+      subtitle: "",
+      text: "Over 30+ Lifestyle Amenities",
+      icon: "Dumbbell"
+    },
+    {
+      id: 5,
+      title: "CCTV Surveillance",
+      subtitle: "",
+      text: "CCTV Surveillance",
+      icon: "Cctv"
+    },
+    {
       id: 6,
-      title: "Multi-Sport Turf",
-      subtitle: "Recreation Arena",
-      icon: "Trophy"
+      title: "24 X 7 Security",
+      subtitle: "",
+      text: "24 X 7 Security",
+      icon: "ShieldCheck"
     },
     {
       id: 7,
-      title: "Pickleball Court",
-      subtitle: "Outdoor Sports Facility",
-      icon: "Activity"
+      title: "Bore water connection to all plots",
+      subtitle: "",
+      text: "Bore water connection to all plots",
+      icon: "Droplets"
     },
     {
       id: 8,
-      title: "Smart LED Street Lights",
-      subtitle: "Dusk-to-Dawn Illumination",
-      icon: "Sun"
+      title: "Light-Up common areas",
+      subtitle: "",
+      text: "Light-Up common areas",
+      icon: "Lightbulb"
+    },
+    {
+      id: 9,
+      title: "Storm Water drain",
+      subtitle: "",
+      text: "Storm Water drain",
+      icon: "Grid3X3"
+    },
+    {
+      id: 10,
+      title: "Compound Wall all around",
+      subtitle: "the site ensuring safety",
+      text: "Compound Wall all around the site ensuring safety",
+      icon: "BrickWall"
+    },
+    {
+      id: 11,
+      title: "Intercom provision to all plots",
+      subtitle: "",
+      text: "Intercom provision to all plots",
+      icon: "PhoneCall"
+    },
+    {
+      id: 12,
+      title: "Landscaped Pathways",
+      subtitle: "all over the site",
+      text: "Landscaped Pathways all over the site",
+      icon: "Footprints"
+    },
+    {
+      id: 13,
+      title: "Well Defined Driveway with Street Lights all over the site",
+      subtitle: "",
+      text: "Well Defined Driveway with Street Lights all over the site",
+      icon: "Lamp"
     }
   ],
 
@@ -282,25 +330,18 @@ export const propertyData = {
     ]
   },
 
-  // --- FULL GALLERY ITEMS (Pure Clean Images with no heavy text overlays) ---
+  // --- FULL GALLERY ITEMS (Pure Clean Images with no text overlays) ---
   galleryImages: [
-    { id: 1, image: img1, title: "Grand Entrance Archway" },
-    { id: 2, image: img2, title: "Aerial Community Layout" },
-    { id: 3, image: img3, title: "Royal Manor Clubhouse" },
-    { id: 4, image: img4, title: "Resort Swimming Pool" },
-    { id: 5, image: img5, title: "Lush Central Park & Boulevards" },
-    { id: 6, image: img6, title: "Modern Fitness Studio" },
-    { id: 7, image: img7, title: "Multi-Sport Recreation Arena" },
-    { id: 8, image: img8, title: "40ft Wide Internal Avenues" },
-    { id: 9, image: img9, title: "100% Underground Infrastructure" },
-    { id: 10, image: img10, title: "Children Play Park" },
-    { id: 11, image: img11, title: "Sanctioned Master Layout Plan" },
-    { id: 12, image: img12, title: "Custom Villa Elevation Blueprint" },
-    { id: 13, image: img13, title: "Luxury Living Room Showcase" },
-    { id: 14, image: img14, title: "Modern Master Bedroom Suite" },
-    { id: 15, image: img15, title: "Contemporary Villa Dining Area" },
-    { id: 16, image: img16, title: "Scenic Sunset Boulevard" },
-    { id: 17, image: img17, title: "Gated Enclave Night Illumination" }
+    { id: 1, image: img1 },
+    { id: 2, image: img2 },
+    { id: 3, image: img3 },
+    { id: 4, image: img4 },
+    { id: 5, image: img5 },
+    { id: 6, image: img6 },
+    { id: 7, image: img7 },
+    { id: 8, image: img8 },
+    { id: 9, image: img9 },
+    { id: 10, image: img10 }
   ],
 
   // --- INFRASTRUCTURE & COMFORT HIGHLIGHTS ---
@@ -317,10 +358,10 @@ export const propertyData = {
   preLaunchOffer: {
     badge: "LIMITED PERIOD PRE-LAUNCH PRIVILEGE",
     headline: "Book Your Dream Luxury Villa at Sathy Main Road, Saravanampatti",
-    subheadline: "3BHK Starts From 2Cr | 4BHK Starts From 2.5Cr • Call 898 898 2030",
+    subheadline: "3BHK: 2 Cr & 2.5 Cr | 4BHK Starts From 3 Cr • Call 898 898 2030",
     timerEndHours: 48,
     perks: [
-      "Special Pre-Launch Pricing: 3BHK from 2Cr & 4BHK from 2.5Cr",
+      "Special Pre-Launch Pricing: 3BHK at 2 Cr & 2.5 Cr | 4BHK from 3 Cr",
       "Free DTCP & Title Clear Verification Assistance",
       "Custom Architectural 3D Villa Blueprint Consultation",
       "Zero Maintenance Fee for 1st Year"
@@ -335,7 +376,7 @@ export const propertyData = {
     },
     {
       q: "What villa configurations and pricing are available?",
-      a: "Vrindhavana Visthara offers 3 BHK Luxury Residential Villas starting from ₹2 Cr* and 4 BHK Royal Villas starting from ₹2.5 Cr* with custom architectural finishes and private garden spaces."
+      a: "Vrindhavana Visthara offers 3 BHK Luxury Residential Villas at ₹2 Cr & ₹2.5 Cr, and 4 BHK Royal Villas starting from ₹3 Cr* across an expansive 10-acre gated community with custom architectural finishes and private garden spaces."
     },
     {
       q: "What approvals does the project have?",

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { propertyData } from '../data/propertyData';
 import { ShieldCheck, CheckCircle2, Phone, Sparkles, Send, MapPin, Home } from 'lucide-react';
-import heroBg from '../assets/banner.png';
-import mobileHeroBg from '../assets/mobile_banner.png';
+import heroBg from '../assets/banner.jpg';
+import mobileHeroBg from '../assets/mobile_banner.jpg';
 import { submitLead } from '../services/leadService';
 import './HeroBanner.css';
 
@@ -241,7 +241,7 @@ export const HeroBanner = ({ onFormSuccess }) => {
               <Home size={20} className="strip-icon" />
               <div className="strip-content">
                 <span className="strip-label">Configuration & Pricing</span>
-                <strong className="strip-val">3BHK From 2Cr | 4BHK From 2.5Cr</strong>
+                <strong className="strip-val">3BHK: 2 Cr & 2.5 Cr | 4BHK From 3 Cr</strong>
               </div>
             </div>
 

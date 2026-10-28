@@ -1,5 +1,5 @@
 import React from 'react';
-import { Landmark, Home, Trees, Sparkles, Navigation2, Plane } from 'lucide-react';
+import { Landmark, Home, Trees, Sparkles, Navigation2, Plane, Wallet } from 'lucide-react';
 import { propertyData } from '../data/propertyData';
 
 const iconMap = {
@@ -8,7 +8,8 @@ const iconMap = {
   Trees: Trees,
   Sparkles: Sparkles,
   Route: Navigation2,
-  Plane: Plane
+  Plane: Plane,
+  Wallet: Wallet
 };
 
 export const StatsCounter = () => {

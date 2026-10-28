@@ -17,7 +17,7 @@ export const Configurations = ({ onSelectPlot }) => {
             Tailored Luxury For <span className="text-gold">Your Family</span>
           </h2>
           <p className="section-description">
-            Choose from thoughtfully crafted 3 BHK and 4 BHK luxury residential villas with expansive floor layouts, private garden spaces, and world-class gated community amenities.
+            Choose from thoughtfully crafted 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (from ₹3 Cr) luxury residential villas across 10 acres with expansive floor layouts, private garden spaces, and world-class gated community amenities.
           </p>
         </div>
 
