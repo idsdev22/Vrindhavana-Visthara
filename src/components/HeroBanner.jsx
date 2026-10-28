@@ -10,7 +10,8 @@ export const HeroBanner = ({ onFormSuccess }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    city: ''
+    city: '',
+    propertyType: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -43,6 +44,10 @@ export const HeroBanner = ({ onFormSuccess }) => {
       alert('Please enter a valid 10-digit mobile number.');
       return;
     }
+    if (!formData.propertyType) {
+      alert('Please select your preferred property configuration (3 BHK or 4 BHK).');
+      return;
+    }
 
     setIsSubmitting(true);
     try {
@@ -50,6 +55,7 @@ export const HeroBanner = ({ onFormSuccess }) => {
         name: formData.name,
         phone: formData.phone,
         city: formData.city,
+        propertyType: formData.propertyType,
         source: 'Hero Banner Form'
       });
     } catch (err) {
@@ -127,6 +133,21 @@ export const HeroBanner = ({ onFormSuccess }) => {
                 </div>
 
                 <div className="form-group-hero">
+                  <select
+                    name="propertyType"
+                    value={formData.propertyType}
+                    onChange={handleChange}
+                    className="hero-select-field"
+                    required
+                  >
+                    <option value="" disabled>Select Property Type *</option>
+                    <option value="3 BHK Luxury Villa (₹2 Cr*)">3 BHK Luxury Villa (₹2 Cr* - 30' × 40')</option>
+                    <option value="3 BHK Premium Villa (₹2.5 Cr*)">3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')</option>
+                    <option value="4 BHK Royal Villa (From ₹3 Cr*)">4 BHK Royal Villa (From ₹3 Cr* - 35' × 52')</option>
+                  </select>
+                </div>
+
+                <div className="form-group-hero">
                   <input
                     type="text"
                     placeholder="City *"
@@ -195,6 +216,21 @@ export const HeroBanner = ({ onFormSuccess }) => {
                     required
                   />
                 </div>
+              </div>
+
+              <div className="form-group-hero">
+                <select
+                  name="propertyType"
+                  value={formData.propertyType}
+                  onChange={handleChange}
+                  className="hero-select-field"
+                  required
+                >
+                  <option value="" disabled>Select Property Type *</option>
+                  <option value="3 BHK Luxury Villa (₹2 Cr*)">3 BHK Luxury Villa (₹2 Cr* - 30' × 40')</option>
+                  <option value="3 BHK Premium Villa (₹2.5 Cr*)">3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')</option>
+                  <option value="4 BHK Royal Villa (From ₹3 Cr*)">4 BHK Royal Villa (From ₹3 Cr* - 35' × 52')</option>
+                </select>
               </div>
 
               <div className="form-group-hero">

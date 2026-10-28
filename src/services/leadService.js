@@ -15,7 +15,8 @@ export async function submitLead(leadData) {
     name: leadData.name?.trim() || '',
     phone: leadData.phone?.trim() || '',
     city: leadData.city?.trim() || '',
-    source: leadData.source || 'General Enquiry',
+    propertyType: leadData.propertyType || leadData.configuration || '',
+    source: leadData.propertyType ? `${leadData.source || 'General Enquiry'} [${leadData.propertyType}]` : (leadData.source || 'General Enquiry'),
     pageUrl: window.location.href,
     timestamp: new Date().toISOString()
   };

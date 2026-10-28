@@ -5,7 +5,6 @@
  * Premium Gated Community with Luxury Residential Villas at Saravanampatti, Coimbatore.
  */
 
-import img1 from '../assets/1.jpg';
 import img2 from '../assets/2.jpg';
 import img3 from '../assets/3.jpg';
 import img4 from '../assets/4.jpg';
@@ -21,9 +20,9 @@ export const propertyData = {
   // --- ASSET REFS ---
   images: {
     hero: img2,
-    amenities: [img1, img3, img4, img5, img6, img7, img8, img9, img10],
+    amenities: [img2, img3, img4, img5, img6, img7, img8, img9, img10],
     gallery: [
-      img1, img2, img3, img4, img5, img6, img7, img8, img9, img10
+      img2, img3, img4, img5, img6, img7, img8, img9, img10
     ]
   },
 
@@ -72,16 +71,17 @@ export const propertyData = {
     pricing3Bhk: "3Bhk: 2Cr & 2.5Cr",
     pricing4Bhk: "4Bhk Starts From 3Cr",
     transitHighlights: [
+      { time: "3 MINS", place: "SARAVANAMPATTI (JUST 2 KM)", icon: "MapPin" },
       { time: "2 MINS", place: "KUMARAN MEDICAL (1 KM)", icon: "Cross" },
       { time: "8 MINS", place: "KGISL CAMPUS (5 KM)", icon: "GraduationCap" },
       { time: "10 MINS", place: "CHIL SEZ IT PARK (6 KM)", icon: "Briefcase" },
       { time: "15 MINS", place: "COIMBATORE AIRPORT (9 KM)", icon: "Plane" }
     ],
     quickBadges: [
-      "3Bhk: 2Cr & 2.5Cr",
-      "4Bhk Starts From 3Cr",
-      "Sathy Main Road, 9 Saravanampatti",
-      "10 Acres Gated Community"
+      "Saravanampatti is just 2 Km",
+      "All Built-Up Areas (Not Land Area)",
+      "Only 4BHK has Double Car Parking",
+      "3Bhk: 2Cr & 2.5Cr | 4Bhk: 3Cr"
     ]
   },
 
@@ -91,26 +91,26 @@ export const propertyData = {
     { label: "Luxury Villas", value: "3 & 4", unit: "BHK", icon: "Home" },
     { label: "3 BHK From", value: "2", unit: "Cr*", icon: "Wallet" },
     { label: "4 BHK From", value: "3", unit: "Cr*", icon: "Sparkles" },
-    { label: "Sathy Main Road", value: "", unit: "It's bang on", icon: "Route" }
+    { label: "Saravanampatti", value: "Just 2", unit: "Km", icon: "Route" }
   ],
 
   // --- PROJECT OVERVIEW SECTION ---
   overview: {
     subtitle: "Premium Gated Community",
     title: "Vrindhavana Visthara, Saravanampatti, Coimbatore",
-    leadText: "Vrindhavana Visthara is an exclusive premium 10-acre gated community offering luxury residential villas at Sathy Main Road, 9 Saravanampatti, Coimbatore.",
+    leadText: "Vrindhavana Visthara is an exclusive premium 10-acre gated community offering luxury residential villas on Sathy Main Road, where Saravanampatti is just 2 Km away.",
     paragraphs: [
-      "Strategically situated on Sathy Main Road in the prestigious Saravanampatti IT corridor, Vrindhavana Visthara places Coimbatore's finest IT hubs, educational institutions, healthcare centers, and shopping destinations within easy reach.",
-      "Thoughtfully designed with 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (starting from ₹3 Cr) luxury villas across 10 acres, the enclave combines architectural elegance with lush landscaped spaces, wide blacktop roads, underground utilities, and 24/7 multi-tier security.",
+      "Strategically situated on Sathy Main Road where Saravanampatti is just 2 Km, Vrindhavana Visthara places Coimbatore's finest IT tech parks, educational campuses, healthcare centers, and shopping destinations within effortless reach.",
+      "Thoughtfully designed with 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (starting from ₹3 Cr) luxury residential villas across 10 acres. All specifications are built-up areas (not land area), and only 4BHK has double car parking. The enclave combines architectural elegance with lush landscaped spaces, wide blacktop roads, underground utilities, and 24/7 multi-tier security.",
       "Call 898 898 2030 to schedule your exclusive site visit and secure your dream villa in Coimbatore's premier gated community."
     ],
     highlightsList: [
-      "10-Acre Premium Gated Community with Luxury Residential Villas",
-      "3Bhk: 2 Cr & 2.5 Cr | 4Bhk Starts From 3 Cr",
-      "Prime Location on Sathy Main Road, 9 Saravanampatti",
-      "Call: 898 898 2030 for VIP Site Visits"
+      "Saravanampatti is just 2 Km | Prime Sathy Main Road Location",
+      "All are built-up areas (not land area)",
+      "Only 4BHK has double car parking",
+      "3Bhk: 2 Cr & 2.5 Cr | 4Bhk Starts From 3 Cr"
     ],
-    imagePrimary: img1,
+    imagePrimary: img2,
     imageSecondary: img3
   },
 
@@ -119,38 +119,53 @@ export const propertyData = {
     {
       id: "villa-3bhk",
       type: "3 BHK Luxury Villa",
-      cent: "2.75 Cents",
-      sqft: "1,850 Sq.Ft.",
+      pill: "Built-Up Area",
       dimension: "30' × 40'",
+      builtUpArea: "30' × 40'",
       idealFor: "Spacious 3 BHK Luxury Residential Villa",
       price: "₹2 Cr*",
       status: "Available",
       popular: false,
-      features: ["East / North Facing", "Double Covered Car Parking", "Private Garden", "Vasthu Compliant"]
+      features: [
+        "Built-Up Area: 30' × 40' (Not Land Area)",
+        "Covered Car Parking",
+        "East / North Facing",
+        "Private Garden & Vasthu Compliant"
+      ]
     },
     {
       id: "villa-3bhk-premium",
       type: "3 BHK Premium Villa",
-      cent: "3.5 Cents",
-      sqft: "2,350 Sq.Ft.",
+      pill: "Built-Up Area",
       dimension: "30' × 50'",
+      builtUpArea: "30' × 50'",
       idealFor: "Enhanced 3 BHK Villa with Large Living & Lawn",
       price: "₹2.5 Cr*",
       status: "Popular",
       popular: true,
-      features: ["Spacious Private Lawn", "Double Covered Car Parking", "Dedicated Family Lounge", "100% Vasthu Compliant"]
+      features: [
+        "Built-Up Area: 30' × 50' (Not Land Area)",
+        "Covered Car Parking",
+        "Spacious Private Lawn",
+        "Dedicated Family Lounge"
+      ]
     },
     {
       id: "villa-4bhk",
       type: "4 BHK Royal Villa",
-      cent: "4.2 Cents",
-      sqft: "2,850 Sq.Ft.",
+      pill: "Built-Up Area",
       dimension: "35' × 52'",
+      builtUpArea: "35' × 52'",
       idealFor: "Grand 4 BHK Duplex Luxury Villa",
       price: "₹3 Cr* Onwards",
       status: "Premium",
       popular: true,
-      features: ["Corner Villa Option", "Private Terrace Deck", "Servant / Home Theatre Room", "High Ceiling Foyer"]
+      features: [
+        "Built-Up Area: 35' × 52' (Not Land Area)",
+        "Double Car Parking (Only 4BHK)",
+        "Private Terrace Deck",
+        "Servant / Home Theatre Room"
+      ]
     }
   ],
 
@@ -266,9 +281,9 @@ export const propertyData = {
       {
         id: 2,
         name: "Saravanampatti",
-        distance: "4 km",
-        time: "6 Mins",
-        landmark: "City Hub & Commercial Junction",
+        distance: "Just 2 km",
+        time: "3 Mins",
+        landmark: "Saravanampatti is just 2 Km",
         icon: "MapPin"
       },
       {
@@ -332,7 +347,6 @@ export const propertyData = {
 
   // --- FULL GALLERY ITEMS (Pure Clean Images with no text overlays) ---
   galleryImages: [
-    { id: 1, image: img1 },
     { id: 2, image: img2 },
     { id: 3, image: img3 },
     { id: 4, image: img4 },
@@ -372,11 +386,11 @@ export const propertyData = {
   faqs: [
     {
       q: "Where is Vrindhavana Visthara located and how is the connectivity?",
-      a: "Vrindhavana Visthara is located on Sathy Main Road, 9 Saravanampatti, Coimbatore. Key landmarks are just minutes away: Kumaran Medical Center (1 km), Saravanampatti (4 km), KGiSL Campus (5 km), CHIL SEZ IT Park (6 km), Prozone Mall (6 km), Coimbatore International Airport (9 km), Annur (19 km), Mettupalayam (40 km), and Ooty (90 km)."
+      a: "Vrindhavana Visthara is located on Sathy Main Road, and Saravanampatti is just 2 Km away. Key landmarks are just minutes away: Kumaran Medical Center (1 km), Saravanampatti (just 2 km), KGiSL Campus (5 km), CHIL SEZ IT Park (6 km), Prozone Mall (6 km), and Coimbatore International Airport (9 km)."
     },
     {
-      q: "What villa configurations and pricing are available?",
-      a: "Vrindhavana Visthara offers 3 BHK Luxury Residential Villas at ₹2 Cr & ₹2.5 Cr, and 4 BHK Royal Villas starting from ₹3 Cr* across an expansive 10-acre gated community with custom architectural finishes and private garden spaces."
+      q: "What villa configurations, built-up areas, and parking options are available?",
+      a: "Vrindhavana Visthara offers 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (starting from ₹3 Cr*) luxury villas. All specified dimensions (30' × 40', 30' × 50', 35' × 52') are built-up areas, not land area. Only 4BHK has double car parking; 3BHK villas come with covered car parking."
     },
     {
       q: "What approvals does the project have?",

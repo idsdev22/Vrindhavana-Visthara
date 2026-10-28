@@ -17,7 +17,7 @@ export const Configurations = ({ onSelectPlot }) => {
             Tailored Luxury For <span className="text-gold">Your Family</span>
           </h2>
           <p className="section-description">
-            Choose from thoughtfully crafted 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (from ₹3 Cr) luxury residential villas across 10 acres with expansive floor layouts, private garden spaces, and world-class gated community amenities.
+            Choose from thoughtfully crafted 3 BHK (₹2 Cr & ₹2.5 Cr) and 4 BHK (from ₹3 Cr) luxury residential villas across 10 acres. <strong>All are built-up areas (not land area).</strong> Only 4BHK has double car parking.
           </p>
         </div>
 
@@ -35,11 +35,11 @@ export const Configurations = ({ onSelectPlot }) => {
               )}
 
               <div className="config-header">
-                <div className="config-cent-pill">{config.cent}</div>
+                <div className="config-cent-pill">{config.pill || config.cent || 'Built-Up Area'}</div>
                 <h3 className="config-type-title">{config.type}</h3>
                 <div className="config-sqft-text">
                   <Ruler size={14} />
-                  <span>{config.sqft} ({config.dimension})</span>
+                  <span>Built-Up Area: {config.dimension}</span>
                 </div>
               </div>
 
