@@ -77,6 +77,10 @@ export const Configurations = ({ onSelectPlot }) => {
             </div>
           ))}
         </div>
+
+        <div className="config-disclaimer-note">
+          <span>* Note: All are built-up areas (not land area). Only 4BHK has double car parking.</span>
+        </div>
       </div>
     </section>
   );

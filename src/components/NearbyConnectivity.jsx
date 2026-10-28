@@ -131,7 +131,7 @@ export const NearbyConnectivity = ({ onOpenEnquiry }) => {
                   </li>
                   <li>
                     <span className="summary-dot"></span>
-                    <span><strong>4 km</strong> to Saravanampatti Junction (6 Mins)</span>
+                    <span><strong>Saravanampatti is just 2 Km</strong> from site (3 Mins)</span>
                   </li>
                   <li>
                     <span className="summary-dot"></span>

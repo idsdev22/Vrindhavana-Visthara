@@ -261,7 +261,7 @@ export const HeroBanner = ({ onFormSuccess }) => {
               <MapPin size={20} className="strip-icon" />
               <div className="strip-content">
                 <span className="strip-label">Prime Location</span>
-                <strong className="strip-val">Sathy Main Road, 9 Saravanampatti</strong>
+                <strong className="strip-val">Sathy Main Road • Saravanampatti is just 2 Km</strong>
               </div>
             </div>
 

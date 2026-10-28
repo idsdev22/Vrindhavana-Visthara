@@ -154,14 +154,14 @@ export const propertyData = {
       id: "villa-4bhk",
       type: "4 BHK Royal Villa",
       pill: "Built-Up Area",
-      dimension: "35' × 52'",
-      builtUpArea: "35' × 52'",
+      dimension: "35' × 50'",
+      builtUpArea: "35' × 50'",
       idealFor: "Grand 4 BHK Duplex Luxury Villa",
       price: "₹3 Cr* Onwards",
       status: "Premium",
       popular: true,
       features: [
-        "Built-Up Area: 35' × 52' (Not Land Area)",
+        "Built-Up Area: 35' × 50' (Not Land Area)",
         "Double Car Parking (Only 4BHK)",
         "Private Terrace Deck",
         "Servant / Home Theatre Room"
