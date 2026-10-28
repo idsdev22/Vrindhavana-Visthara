@@ -20,7 +20,7 @@ export const ProjectOverview = ({ onOpenEnquiry }) => {
               <div className="visual-badge-floating">
                 <Award size={22} className="badge-icon text-gold" />
                 <div>
-                  <div className="badge-title">DTCP Approved Gated Community</div>
+                  <div className="badge-title">DTCP Approved premium Gated Community</div>
                   <div className="badge-subtitle">Sathy Main Road, 9 Saravanampatti</div>
                 </div>
               </div>
