@@ -2,35 +2,40 @@
 export const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbzjfUiJnI82RvSZ-u7lSmywVISbsl_2KnPo3P14UcWYTRnH8uXhN769oV3-Qj6hCLNiEw/exec';
 
-/**
- * Submits a website enquiry to Google Apps Script.
- * Apps Script saves the enquiry, sends an email,
- * and forwards it to the Firebase CRM API.
- */
 export async function submitLead(leadData) {
-  const propertyType =
-    leadData.propertyType ||
-    leadData.configuration ||
-    '';
-
   const payload = {
-    name: String(leadData.name || leadData.fullName || '').trim(),
-    phone: String(leadData.phone || leadData.phoneNumber || '').trim(),
+    name: String(
+      leadData.name || leadData.fullName || ''
+    ).trim(),
+
+    phone: String(
+      leadData.phone || leadData.phoneNumber || ''
+    ).trim(),
+
     city: String(leadData.city || '').trim(),
-    address: String(leadData.address || leadData.city || '').trim(),
-    projectName: String(leadData.projectName || 'Unknown Project').trim(),
-    propertyType,
-    source: propertyType
-      ? `${leadData.source || 'General Enquiry'} [${propertyType}]`
-      : (leadData.source || 'General Enquiry'),
+
+    address: String(leadData.address || '').trim(),
+
+    projectName: String(
+      leadData.projectName || 'Unknown Project'
+    ).trim(),
+
+    propertyType:
+      leadData.propertyType ||
+      leadData.configuration ||
+      '',
+
+    source: 'VISTHARA',
+
     pageUrl: window.location.href,
+
     timestamp: new Date().toISOString()
   };
 
   if (!payload.name || !payload.phone) {
     return {
       success: false,
-      error: 'Name and phone number are required.'
+      message: 'Please enter your name and phone number.'
     };
   }
 
@@ -44,17 +49,19 @@ export async function submitLead(leadData) {
       body: JSON.stringify(payload)
     });
 
-    // Opaque response: this does not confirm server-side success.
+    // no-cors does not expose the server response.
+    // This means the request was attempted, not verified.
     return {
       success: true,
-      message: 'Enquiry request submitted.'
+      message: 'Your enquiry request has been submitted.'
     };
+
   } catch (error) {
-    console.error('Failed to submit lead:', error);
+    console.error('Lead submission failed:', error);
 
     return {
       success: false,
-      error: 'Unable to submit enquiry. Please try again.'
+      message: 'Unable to submit your enquiry. Please try again.'
     };
   }
 }
