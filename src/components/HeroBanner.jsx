@@ -4,6 +4,7 @@ import { ShieldCheck, CheckCircle2, Phone, Sparkles, Send, MapPin, Home } from '
 import heroBg from '../assets/banner.jpg';
 import mobileHeroBg from '../assets/mobile_banner.jpg';
 import { submitLead } from '../services/leadService';
+import { PropertyTypeSelect } from './PropertyTypeSelect';
 import './HeroBanner.css';
 
 export const HeroBanner = ({ onFormSuccess }) => {
@@ -133,18 +134,11 @@ export const HeroBanner = ({ onFormSuccess }) => {
                 </div>
 
                 <div className="form-group-hero">
-                  <select
+                  <PropertyTypeSelect
                     name="propertyType"
                     value={formData.propertyType}
                     onChange={handleChange}
-                    className="hero-select-field"
-                    required
-                  >
-                    <option value="" disabled>Select Property Type *</option>
-                    <option value="3 BHK Luxury Villa (₹2 Cr*)">3 BHK Luxury Villa (₹2 Cr* - 30' × 40')</option>
-                    <option value="3 BHK Premium Villa (₹2.5 Cr*)">3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')</option>
-                    <option value="4 BHK Royal Villa (From ₹3 Cr*)">4 BHK Royal Villa (From ₹3 Cr* - 35' × 52')</option>
-                  </select>
+                  />
                 </div>
 
                 <div className="form-group-hero">
@@ -219,18 +213,11 @@ export const HeroBanner = ({ onFormSuccess }) => {
               </div>
 
               <div className="form-group-hero">
-                <select
+                <PropertyTypeSelect
                   name="propertyType"
                   value={formData.propertyType}
                   onChange={handleChange}
-                  className="hero-select-field"
-                  required
-                >
-                  <option value="" disabled>Select Property Type *</option>
-                  <option value="3 BHK Luxury Villa (₹2 Cr*)">3 BHK Luxury Villa (₹2 Cr* - 30' × 40')</option>
-                  <option value="3 BHK Premium Villa (₹2.5 Cr*)">3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')</option>
-                  <option value="4 BHK Royal Villa (From ₹3 Cr*)">4 BHK Royal Villa (From ₹3 Cr* - 35' × 52')</option>
-                </select>
+                />
               </div>
 
               <div className="form-group-hero">

@@ -105,10 +105,11 @@
 .enquiry-form input[type="tel"],
 .enquiry-form select {
   width: 100%;
-  padding: 10px 13px;
+  padding: 11px 14px;
   border: 1.5px solid #dce7e1;
-  border-radius: 7px;
-  font-size: 13.5px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  min-height: 46px;
   outline: none;
   background: #f8fafc;
   color: #0f172a;
@@ -117,33 +118,48 @@
   box-sizing: border-box;
 }
 
-.enquiry-form select {
+.enquiry-form select,
+.hero-select-field {
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230d3d1e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230d3d1e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 36px;
+  background-position: right 14px center;
+  background-size: 18px 18px;
+  padding-right: 42px;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 .enquiry-form select:invalid,
-.enquiry-form select option[value=""] {
+.enquiry-form select option[value=""],
+.hero-select-field:invalid,
+.hero-select-field option[value=""] {
   color: #8fa096;
 }
 
-.enquiry-form select option {
+.enquiry-form select option,
+.hero-select-field option {
   color: #0f172a;
   background: #ffffff;
+  font-size: 15px;
+  padding: 12px 14px;
+  line-height: 1.5;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-weight: 500;
 }
 
 .enquiry-form input::placeholder {
   color: #8fa096;
   font-family: var(--font-poppins, 'Poppins', sans-serif);
-  font-size: 13px;
+  font-size: 13.5px;
 }
 
-.enquiry-form input:focus {
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.hero-select-field:focus {
   border-color: #0d3d1e;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(13, 61, 30, 0.12);
@@ -315,16 +331,42 @@
   }
 
   .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="text"],
-  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="tel"] {
-    font-size: 14.5px;
-    padding: 11px 13px;
+  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="tel"],
+  .hero-enquiry-box.mobile-card-hero .enquiry-form select,
+  .hero-enquiry-box.mobile-card-hero .hero-select-field {
+    font-size: 16px !important; /* 16px prevents iOS Safari auto-zoom and ensures clear visibility */
+    min-height: 48px;
+    padding: 12px 14px;
     border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-form select,
+  .hero-enquiry-box.mobile-card-hero .hero-select-field {
+    padding-right: 42px;
+    background-size: 18px 18px;
+    background-position: right 14px center;
+    font-weight: 500;
+  }
+
+  /* Dropdown options when opened in mobile / touch views */
+  .hero-enquiry-box.mobile-card-hero select option,
+  .hero-enquiry-box.mobile-card-hero .hero-select-field option {
+    font-size: 15.5px !important;
+    padding: 13px 12px;
+    line-height: 1.5;
+    background: #ffffff;
+    color: #0f172a;
+    font-weight: 500;
   }
 
   .hero-enquiry-box.mobile-card-hero .hero-phone-prefix {
-    font-size: 14.5px;
-    padding: 0 13px;
+    font-size: 16px;
+    padding: 0 14px;
     border-radius: 8px 0 0 8px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .hero-enquiry-box.mobile-card-hero .hero-phone-input-wrap .hero-phone-field {
@@ -332,8 +374,9 @@
   }
 
   .hero-enquiry-box.mobile-card-hero .enquiry-submit {
-    padding: 13px;
-    font-size: 13.5px;
+    padding: 14px;
+    font-size: 15px;
+    min-height: 48px;
     border-radius: 8px;
   }
 }
@@ -349,6 +392,29 @@
 
   .hero-enquiry-box.mobile-card-hero .enquiry-title {
     font-size: 18px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="text"],
+  .hero-enquiry-box.mobile-card-hero .enquiry-form input[type="tel"],
+  .hero-enquiry-box.mobile-card-hero .enquiry-form select,
+  .hero-enquiry-box.mobile-card-hero .hero-select-field {
+    font-size: 15.5px !important;
+    min-height: 48px;
+    padding: 11px 12px;
+  }
+
+  .hero-enquiry-box.mobile-card-hero .enquiry-form select,
+  .hero-enquiry-box.mobile-card-hero .hero-select-field {
+    padding-right: 38px;
+    background-size: 16px 16px;
+    background-position: right 12px center;
+  }
+
+  .hero-enquiry-box.mobile-card-hero select option,
+  .hero-enquiry-box.mobile-card-hero .hero-select-field option {
+    font-size: 15px !important;
+    padding: 12px 10px;
+    white-space: normal;
   }
 }
 

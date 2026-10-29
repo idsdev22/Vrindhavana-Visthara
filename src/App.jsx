@@ -41,7 +41,10 @@ function App() {
   const handleSelectPlot = (plot) => {
     setModalState({
       isOpen: true,
-      initialData: { title: `${plot.type || 'Luxury Villa'} - ${plot.price || ''}` }
+      initialData: { 
+        title: `${plot.type || 'Luxury Villa'} - ${plot.price || ''}`,
+        selectedConfig: `${plot.type || ''}`
+      }
     });
   };
 

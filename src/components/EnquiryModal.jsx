@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, CheckCircle2, ArrowRight } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { submitLead } from '../services/leadService';
+import { PropertyTypeSelect } from './PropertyTypeSelect';
 
 export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
   const [formData, setFormData] = useState({
@@ -16,7 +17,16 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
   // Sync initial property if passed from plot selection
   React.useEffect(() => {
     if (initialData?.selectedConfig) {
-      setFormData(prev => ({ ...prev, propertyType: initialData.selectedConfig }));
+      const target = initialData.selectedConfig.toLowerCase();
+      if (target.includes('4 bhk')) {
+        setFormData(prev => ({ ...prev, propertyType: "4 BHK Royal Villa (From ₹3 Cr* - 35' × 50')" }));
+      } else if (target.includes("30' × 50'") || target.includes('2.5 cr')) {
+        setFormData(prev => ({ ...prev, propertyType: "3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')" }));
+      } else if (target.includes('3 bhk') || target.includes('2 cr')) {
+        setFormData(prev => ({ ...prev, propertyType: "3 BHK Luxury Villa (₹2 Cr* - 30' × 40')" }));
+      } else {
+        setFormData(prev => ({ ...prev, propertyType: initialData.selectedConfig }));
+      }
     }
   }, [initialData]);
 
@@ -46,6 +56,10 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
     }
     if (formData.phone.length !== 10) {
       alert('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+    if (!formData.propertyType) {
+      alert('Please select your preferred property configuration (3 BHK or 4 BHK).');
       return;
     }
 
@@ -159,18 +173,11 @@ export const EnquiryModal = ({ isOpen, onClose, initialData = {} }) => {
               </div>
 
               <div className="form-group">
-                <select
+                <PropertyTypeSelect
                   name="propertyType"
                   value={formData.propertyType}
                   onChange={handleChange}
-                  className="form-input"
-                  required
-                >
-                  <option value="" disabled>Select Property Type *</option>
-                  <option value="3 BHK Luxury Villa (₹2 Cr* - 30' × 40')">3 BHK Luxury Villa (₹2 Cr* - 30' × 40')</option>
-                  <option value="3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')">3 BHK Premium Villa (₹2.5 Cr* - 30' × 50')</option>
-                  <option value="4 BHK Royal Villa (From ₹3 Cr* - 35' × 52')">4 BHK Royal Villa (From ₹3 Cr* - 35' × 52')</option>
-                </select>
+                />
               </div>
 
               <div className="form-group">
