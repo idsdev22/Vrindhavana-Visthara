@@ -1,28 +1,40 @@
-// Google Apps Script Web App Endpoint for Dream Villa Makers Leads
-export const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjfUiJnI82RvSZ-u7lSmywVISbsl_2KnPo3P14UcWYTRnH8uXhN769oV3-Qj6hCLNiEw/exec';
+
+export const GOOGLE_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbzjfUiJnI82RvSZ-u7lSmywVISbsl_2KnPo3P14UcWYTRnH8uXhN769oV3-Qj6hCLNiEw/exec';
 
 /**
- * Submits lead data to Google Sheets & triggers automated email alert.
- * 
- * @param {Object} leadData
- * @param {string} leadData.name - Customer full name
- * @param {string} leadData.phone - 10-digit mobile number
- * @param {string} [leadData.city] - Customer city
- * @param {string} [leadData.source] - Lead source or enquiry context (e.g. Hero Banner, Brochure Download)
+ * Submits a website enquiry to Google Apps Script.
+ * Apps Script saves the enquiry, sends an email,
+ * and forwards it to the Firebase CRM API.
  */
 export async function submitLead(leadData) {
+  const propertyType =
+    leadData.propertyType ||
+    leadData.configuration ||
+    '';
+
   const payload = {
-    name: leadData.name?.trim() || '',
-    phone: leadData.phone?.trim() || '',
-    city: leadData.city?.trim() || '',
-    propertyType: leadData.propertyType || leadData.configuration || '',
-    source: leadData.propertyType ? `${leadData.source || 'General Enquiry'} [${leadData.propertyType}]` : (leadData.source || 'General Enquiry'),
+    name: String(leadData.name || leadData.fullName || '').trim(),
+    phone: String(leadData.phone || leadData.phoneNumber || '').trim(),
+    city: String(leadData.city || '').trim(),
+    address: String(leadData.address || leadData.city || '').trim(),
+    projectName: String(leadData.projectName || 'Unknown Project').trim(),
+    propertyType,
+    source: propertyType
+      ? `${leadData.source || 'General Enquiry'} [${propertyType}]`
+      : (leadData.source || 'General Enquiry'),
     pageUrl: window.location.href,
     timestamp: new Date().toISOString()
   };
 
+  if (!payload.name || !payload.phone) {
+    return {
+      success: false,
+      error: 'Name and phone number are required.'
+    };
+  }
+
   try {
-    // Note: mode: 'no-cors' is required for Google Apps Script Web Apps to prevent browser CORS blocks
     await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
@@ -32,9 +44,17 @@ export async function submitLead(leadData) {
       body: JSON.stringify(payload)
     });
 
-    return { success: true };
+    // Opaque response: this does not confirm server-side success.
+    return {
+      success: true,
+      message: 'Enquiry request submitted.'
+    };
   } catch (error) {
-    console.error('Failed to submit lead to Google Sheets:', error);
-    return { success: false, error };
+    console.error('Failed to submit lead:', error);
+
+    return {
+      success: false,
+      error: 'Unable to submit enquiry. Please try again.'
+    };
   }
 }
