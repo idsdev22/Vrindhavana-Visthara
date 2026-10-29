@@ -41,7 +41,7 @@ function App() {
   const handleSelectPlot = (plot) => {
     setModalState({
       isOpen: true,
-      initialData: { 
+      initialData: {
         title: `${plot.type || 'Luxury Villa'} - ${plot.price || ''}`,
         selectedConfig: `${plot.type || ''}`
       }
@@ -64,9 +64,9 @@ function App() {
         <ProjectOverview
           onOpenEnquiry={() => handleOpenEnquiry({ title: 'Site Visit Scheduling' })}
         />
+        <MasterPlanGallery />
         <Configurations onSelectPlot={handleSelectPlot} />
         <Amenities />
-        <MasterPlanGallery />
         <NearbyConnectivity onOpenEnquiry={() => handleOpenEnquiry({ title: 'Location Advantage' })} />
         {/* <FaqSection /> */}
       </main>
