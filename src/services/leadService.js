@@ -1,5 +1,5 @@
 // Google Apps Script Web App Endpoint for Dream Villa Makers Leads
-export const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjfUiJnI82RvSZ-u7lSmywVISbsl_2KnPo3P14UcWYTRnH8uXhN769oV3-Qj6hCLNiEw/exec';
+export const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxDDQZoRi_1pLVxj7SHKhZ9KwwhjsV0uHKTU9vv2vPCSzsVHXr-KAO5KdRRA2d-SU_aA/exec';
 
 /**
  * Submits lead data to Google Sheets & triggers automated email alert.
